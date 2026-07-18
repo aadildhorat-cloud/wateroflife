@@ -35,15 +35,14 @@
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   
   <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="images-charity/hero-water.jpg" />
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
   
   <!-- Schema.org JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -77,97 +76,31 @@
         "taxID": "NPC 2025/970209/08",
         "foundingDate": "2025",
         "mission": "Providing sustainable clean water access and Islamic community infrastructure in Malawi through 100% transparent donations."
-      },
-      {
-        "@type": "WebSite",
-        "url": "https://wateroflife.org.za",
-        "name": "Water of Life NPC",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://wateroflife.org.za/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://wateroflife.org.za"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Projects",
-            "item": "https://wateroflife.org.za/projects"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is my donation tax deductible?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Water of Life NPC is a registered South African Non-Profit Company. We are applying for PBO status with SARS. Once approved, donations will be tax-deductible under Section 18A. Contact us for the latest status."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I know my donation reaches Malawi?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "100% of your donation goes directly to projects. We send photos and completion reports for every well, borehole, or masjid built. Our Malawi team provides on-ground verification."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I donate Zakat through Water of Life?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. All our water and community projects qualify for Zakat. Use our Zakat calculator or contact us to ensure your donation meets Islamic requirements."
-            }
-          }
-        ]
       }
     ]
   }
   </script>
-  
-  <!-- Google Analytics 4 (Replace G-XXXXXXXXXX with actual ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX', {
-      'anonymize_ip': true,
-      'send_page_view': true
-    });
-  </script>
-  
-  <!-- Critical CSS Inlined for Performance -->
+
+  <!-- Critical CSS -->
   <style>
     /* ===== CSS VARIABLES & RESET ===== */
     :root {
-      --primary: #1e88e5;
-      --primary-dark: #0d47a1;
-      --secondary: #0288d1;
+      --primary: #0288d1;
+      --primary-dark: #01579b;
+      --secondary: #00bcd4;
       --accent: #2e7d32;
-      --light: #f5fbff;
-      --bg-light: #fafafa;
+      --accent-light: #4caf50;
+      --light: #f0f9ff;
+      --bg-light: #fafbfc;
       --bg-white: #ffffff;
-      --text-dark: #1a1a1a;
-      --text-medium: #4a4a4a;
-      --text-light: #757575;
-      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-      --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
-      --shadow-lg: 0 12px 40px rgba(0,0,0,0.18);
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --text-dark: #0f172a;
+      --text-medium: #475569;
+      --text-light: #94a3b8;
+      --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+      --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04);
+      --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+      --shadow-glow: 0 0 20px rgba(2, 136, 209, 0.3);
+      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       --radius: 16px;
       --radius-lg: 24px;
       --container: 1200px;
@@ -175,16 +108,6 @@
       --spacing-md: 2rem;
       --spacing-lg: 4rem;
       --spacing-xl: 6rem;
-    }
-    
-    [data-theme="dark"] {
-      --bg-light: #121212;
-      --bg-white: #1e1e1e;
-      --text-dark: #f5f5f5;
-      --text-medium: #bdbdbd;
-      --text-light: #9e9e9e;
-      --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
-      --shadow-md: 0 8px 30px rgba(0,0,0,0.4);
     }
     
     *, *::before, *::after {
@@ -205,7 +128,6 @@
       line-height: 1.6;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
     
     img {
@@ -220,61 +142,102 @@
       transition: var(--transition);
     }
     
-    a:hover {
-      color: var(--primary-dark);
-    }
-    
     .container {
       width: 100%;
       max-width: var(--container);
       margin: 0 auto;
       padding: 0 var(--spacing-sm);
     }
-    
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-    
-    /* Skip Link for Accessibility */
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: var(--primary);
-      color: white;
-      padding: 8px 16px;
-      z-index: 3000;
-      transition: top 0.3s;
-    }
-    .skip-link:focus {
+
+    /* ===== PRELOADER ===== */
+    .preloader {
+      position: fixed;
       top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
     }
     
+    .preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    
+    .water-drop {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: relative;
+      animation: drop-pulse 1.5s ease-in-out infinite;
+      box-shadow: 0 0 30px rgba(2, 136, 209, 0.4);
+    }
+    
+    .water-drop::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      width: 20%;
+      height: 20%;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+    }
+    
+    @keyframes drop-pulse {
+      0%, 100% { transform: scale(1) translateY(0); }
+      50% { transform: scale(1.1) translateY(-10px); }
+    }
+
+    /* ===== SCROLL REVEAL ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .reveal-left.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
     /* ===== NAVIGATION ===== */
     .nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-sm);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.3);
       z-index: 2000;
-      padding: 12px 0;
+      padding: 16px 0;
       transition: var(--transition);
     }
     
     .nav.scrolled {
-      padding: 8px 0;
-      background: rgba(255, 255, 255, 0.98);
+      padding: 10px 0;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: var(--shadow-md);
     }
     
     .nav-container {
@@ -286,20 +249,32 @@
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
+      font-family: 'Poppins', sans-serif;
       font-size: 1.4rem;
       font-weight: 700;
       color: var(--primary-dark);
       white-space: nowrap;
+      transition: var(--transition);
     }
     
-    .nav-logo-icon {
-      font-size: 1.6rem;
+    .nav-logo:hover {
+      transform: scale(1.02);
+    }
+    
+    .nav-logo-img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: white;
+      padding: 4px;
+      box-shadow: var(--shadow-sm);
     }
     
     .nav-menu {
       display: flex;
-      gap: 24px;
+      gap: 32px;
       list-style: none;
       align-items: center;
     }
@@ -307,7 +282,7 @@
     .nav-link {
       color: var(--text-dark);
       font-weight: 500;
-      font-size: 1rem;
+      font-size: 0.95rem;
       padding: 8px 4px;
       position: relative;
       white-space: nowrap;
@@ -320,8 +295,9 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--primary);
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       transition: var(--transition);
+      border-radius: 2px;
     }
     
     .nav-link:hover::after,
@@ -330,18 +306,23 @@
     }
     
     .nav-cta {
-      background: var(--accent);
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
       color: white !important;
-      padding: 10px 20px;
+      padding: 10px 24px;
       border-radius: 50px;
       font-weight: 600;
       box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .nav-cta::after {
+      display: none;
     }
     
     .nav-cta:hover {
-      background: #1b5e20;
       transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
+      box-shadow: 0 10px 20px rgba(46, 125, 50, 0.3);
     }
     
     .mobile-toggle {
@@ -352,18 +333,76 @@
       color: var(--text-dark);
       cursor: pointer;
       padding: 8px;
+      z-index: 2001;
+    }
+
+    /* ===== HIVE TIMES BADGE ===== */
+    .hive-badge-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFD700;
+      border: 2px solid #E5C100;
+      border-radius: 50px;
+      padding: 6px 14px;
+      text-decoration: none;
+      transition: var(--transition);
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hive-icon-svg {
+      width: 18px;
+      height: 18px;
+      fill: #000000;
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .hive-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .hive-text {
+      color: #000000;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     
-    /* ===== HERO SECTION WITH WATERFALL ANIMATION ===== */
+    .hive-subtext {
+      font-size: 9px;
+      font-weight: 600;
+      color: #333333;
+      text-transform: uppercase;
+    }
+
+    .hive-badge-link:hover {
+      background-color: #E5C100;
+      border-color: #C9A900;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .hive-badge-link:hover .hive-icon-svg {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    /* ===== HERO SECTION ===== */
     .hero {
       position: relative;
-      min-height: 90vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: var(--spacing-xl) 0 var(--spacing-lg);
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--secondary));
+      background: linear-gradient(135deg, #0d47a1 0%, #0288d1 50%, #00bcd4 100%);
       color: white;
       overflow: hidden;
     }
@@ -389,6 +428,7 @@
       height: 100%;
       z-index: 2;
       opacity: 0.3;
+      pointer-events: none;
     }
     
     .waterfall-layer {
@@ -398,8 +438,8 @@
       background: repeating-linear-gradient(
         to bottom,
         transparent,
-        rgba(255, 255, 255, 0.06) 1px,
-        transparent 3px
+        rgba(255, 255, 255, 0.08) 1px,
+        transparent 4px
       );
       animation: waterfall-fall linear infinite;
     }
@@ -414,79 +454,74 @@
       100% { transform: translateY(100%); }
     }
     
-    .droplets {
+    .hero-particles {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      pointer-events: none;
       z-index: 3;
+      pointer-events: none;
     }
     
-    .droplet {
+    .particle {
       position: absolute;
-      width: 3px;
-      height: 6px;
-      background: rgba(255,255,255,0.8);
-      border-radius: 0 0 50% 50%;
-      animation: droplet-fall 3s linear infinite;
-      opacity: 0;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      animation: float-up linear infinite;
     }
     
-    @keyframes droplet-fall {
-      0% { transform: translateY(-20px) scale(0.5); opacity: 0; }
+    @keyframes float-up {
+      0% { transform: translateY(100vh) scale(0); opacity: 0; }
       10% { opacity: 1; }
       90% { opacity: 1; }
-      100% { transform: translateY(100vh) scale(1); opacity: 0; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
     }
     
     .hero-content {
       position: relative;
       z-index: 10;
-      max-width: 800px;
+      max-width: 900px;
       padding: 0 var(--spacing-sm);
-      animation: fadeInUp 0.8s ease-out;
-    }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
     
     .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.2);
-      padding: 6px 16px;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      padding: 8px 20px;
       border-radius: 50px;
       font-size: 0.9rem;
+      font-weight: 500;
       margin-bottom: var(--spacing-sm);
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      animation: fadeInDown 0.8s ease-out;
+    }
+    
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     
     .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: var(--spacing-sm);
-      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
     }
     
     .hero-subtitle {
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
       opacity: 0.95;
       margin-bottom: var(--spacing-md);
-      max-width: 600px;
+      max-width: 650px;
       margin-left: auto;
       margin-right: auto;
+      min-height: 3rem;
+      animation: fadeInUp 0.8s ease-out 0.4s backwards;
     }
     
     .hero-stats {
@@ -495,38 +530,54 @@
       gap: var(--spacing-md);
       margin: var(--spacing-md) 0;
       flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out 0.6s backwards;
     }
     
     .stat-item {
       text-align: center;
       min-width: 120px;
+      padding: 16px;
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: var(--transition);
+    }
+    
+    .stat-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.2);
     }
     
     .stat-number {
-      font-size: 1.8rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
       font-weight: 700;
       display: block;
     }
     
     .stat-label {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       opacity: 0.9;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     
     .hero-cta-group {
       display: flex;
-      gap: 12px;
+      gap: 16px;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: var(--spacing-md);
+      animation: fadeInUp 0.8s ease-out 0.8s backwards;
     }
     
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 14px 28px;
+      gap: 10px;
+      padding: 16px 32px;
       font-size: 1.05rem;
       font-weight: 600;
       border-radius: 50px;
@@ -535,29 +586,50 @@
       transition: var(--transition);
       text-decoration: none;
       white-space: nowrap;
-      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
     }
     
     .btn-primary {
       background: #25D366;
       color: white;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
     }
     
     .btn-primary:hover {
       background: #128C7E;
       transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
+      box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
     }
     
     .btn-secondary {
-      background: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.15);
       color: white;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(8px);
+      border: 2px solid rgba(255,255,255,0.3);
     }
     
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.25);
       transform: translateY(-3px);
+      border-color: white;
+    }
+
+    /* Ripple Effect */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(0);
+      animation: ripple-animation 0.6s linear;
+      pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
     }
     
     .water-surface {
@@ -565,21 +637,21 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 80px;
-      background: linear-gradient(to top, rgba(255,255,255,0.3), transparent);
+      height: 100px;
+      background: linear-gradient(to top, var(--bg-light), transparent);
       z-index: 4;
-      filter: blur(20px);
-      animation: surface-glow 4s ease-in-out infinite alternate;
+      filter: blur(10px);
     }
     
-    @keyframes surface-glow {
-      from { opacity: 0.4; }
-      to { opacity: 0.7; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    
+
     /* ===== SECTIONS ===== */
     .section {
       padding: var(--spacing-xl) 0;
+      position: relative;
     }
     
     .section-header {
@@ -589,30 +661,38 @@
     }
     
     .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
       font-weight: 700;
       margin-bottom: var(--spacing-sm);
       color: var(--text-dark);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 2px;
     }
     
     .section-subtitle {
       font-size: 1.15rem;
       color: var(--text-medium);
       line-height: 1.7;
+      margin-top: 24px;
     }
-    
-    .divider {
-      width: 60px;
-      height: 4px;
-      background: var(--primary);
-      margin: 16px auto;
-      border-radius: 2px;
-    }
-    
+
     /* ===== PROJECTS GRID ===== */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: var(--spacing-md);
     }
     
@@ -625,16 +705,35 @@
       display: flex;
       flex-direction: column;
       height: 100%;
+      border: 1px solid rgba(0,0,0,0.05);
+      position: relative;
+    }
+    
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      z-index: 2;
     }
     
     .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg), var(--shadow-glow);
+    }
+    
+    .project-card:hover::before {
+      transform: scaleX(1);
     }
     
     .project-image {
       position: relative;
-      height: 200px;
+      height: 220px;
       overflow: hidden;
     }
     
@@ -642,23 +741,32 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.6s ease;
     }
     
     .project-card:hover .project-image img {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
     
     .project-badge {
       position: absolute;
-      top: 12px;
-      right: 12px;
-      background: var(--accent);
+      top: 16px;
+      right: 16px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
       color: white;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+      animation: pulse-badge 2s infinite;
+    }
+    
+    @keyframes pulse-badge {
+      0%, 100% { box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3); }
+      50% { box-shadow: 0 4px 20px rgba(46, 125, 50, 0.5); }
     }
     
     .project-content {
@@ -669,6 +777,7 @@
     }
     
     .project-title {
+      font-family: 'Poppins', sans-serif;
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 8px;
@@ -676,16 +785,30 @@
     }
     
     .project-price {
-      font-size: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
       font-weight: 800;
       color: var(--primary);
       margin: 8px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .project-price::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: var(--secondary);
+      border-radius: 2px;
     }
     
     .project-description {
       color: var(--text-medium);
       margin-bottom: var(--spacing-sm);
       flex: 1;
+      line-height: 1.6;
     }
     
     .project-features {
@@ -697,8 +820,8 @@
     .project-features li {
       display: flex;
       align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
+      gap: 8px;
+      margin-bottom: 8px;
       color: var(--text-medium);
     }
     
@@ -706,165 +829,298 @@
       content: "✓";
       color: var(--accent);
       font-weight: bold;
+      font-size: 1.1rem;
     }
     
     .card-cta {
       margin-top: auto;
       width: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      box-shadow: 0 4px 15px rgba(2, 136, 209, 0.3);
     }
     
+    .card-cta:hover {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(2, 136, 209, 0.4);
+    }
+
     /* ===== IMPACT SECTION ===== */
     .impact-section {
-      background: linear-gradient(135deg, var(--light), #e3f2fd);
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .impact-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(2, 136, 209, 0.1) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
     }
     
     .impact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: var(--spacing-md);
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
     
     .impact-card {
       padding: var(--spacing-md);
-      background: var(--bg-white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: var(--transition);
+    }
+    
+    .impact-card:hover {
+      transform: translateY(-8px);
+      background: white;
+      box-shadow: var(--shadow-lg);
     }
     
     .impact-icon {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: var(--spacing-sm);
+      display: inline-block;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
     
     .impact-number {
-      font-size: 2.2rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
       font-weight: 800;
-      color: var(--primary);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       display: block;
       margin-bottom: 4px;
     }
     
     .impact-label {
       color: var(--text-medium);
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    
+
     /* ===== HOW IT WORKS ===== */
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: var(--spacing-md);
       margin-top: var(--spacing-md);
+      position: relative;
+    }
+    
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      z-index: 0;
+      opacity: 0.3;
     }
     
     .step-card {
       text-align: center;
       padding: var(--spacing-md);
       position: relative;
+      z-index: 1;
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      transition: var(--transition);
+    }
+    
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
     }
     
     .step-number {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 48px;
-      height: 48px;
-      background: var(--primary);
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
       border-radius: 50%;
+      font-family: 'Poppins', sans-serif;
       font-weight: 700;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       margin: 0 auto var(--spacing-sm);
-      box-shadow: var(--shadow-md);
+      box-shadow: 0 10px 20px rgba(2, 136, 209, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .step-number::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: rotate(45deg);
+      transition: 0.5s;
+      opacity: 0;
+    }
+    
+    .step-card:hover .step-number::after {
+      animation: shine 0.5s ease-in-out;
+    }
+    
+    @keyframes shine {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
     }
     
     .step-title {
+      font-family: 'Poppins', sans-serif;
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 8px;
+      color: var(--text-dark);
     }
     
     .step-desc {
       color: var(--text-medium);
       font-size: 0.95rem;
+      line-height: 1.6;
     }
-    
+
     /* ===== DONATION METHODS ===== */
     .donation-methods {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: var(--spacing-md);
       margin-top: var(--spacing-md);
     }
     
     .method-card {
       background: var(--bg-white);
-      border-radius: var(--radius);
+      border-radius: var(--radius-lg);
       padding: var(--spacing-md);
-      box-shadow: var(--shadow-sm);
-      border-left: 4px solid var(--primary);
+      box-shadow: var(--shadow-md);
+      border-left: 5px solid var(--primary);
       transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .method-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(2, 136, 209, 0.03), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
     
     .method-card:hover {
-      transform: translateX(4px);
-      box-shadow: var(--shadow-md);
+      transform: translateX(8px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .method-card:hover::before {
+      opacity: 1;
     }
     
     .method-title {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 1.2rem;
+      gap: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: var(--spacing-sm);
+      color: var(--text-dark);
     }
     
     .method-details {
       color: var(--text-medium);
       font-size: 0.95rem;
-      line-height: 1.7;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
     }
     
     .method-details strong {
       color: var(--text-dark);
       display: block;
-      margin: 4px 0;
+      margin: 8px 0 4px;
+      font-weight: 600;
     }
     
     .bank-note {
-      background: #fff8e1;
-      padding: 12px;
-      border-radius: 8px;
-      margin-top: 12px;
+      background: linear-gradient(135deg, #fff8e1, #ffecb3);
+      padding: 16px;
+      border-radius: 12px;
+      margin-top: 16px;
       font-size: 0.9rem;
       color: #5d4037;
+      border-left: 4px solid #ffc107;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
     }
-    
+
     /* ===== TESTIMONIALS ===== */
     .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: var(--spacing-md);
     }
     
     .testimonial-card {
       background: var(--bg-white);
-      border-radius: var(--radius);
+      border-radius: var(--radius-lg);
       padding: var(--spacing-md);
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-md);
       position: relative;
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
     }
     
     .testimonial-card::before {
       content: '"';
       position: absolute;
-      top: 16px;
-      left: 20px;
-      font-size: 4rem;
+      top: 20px;
+      left: 24px;
+      font-size: 5rem;
       color: var(--primary);
-      opacity: 0.15;
+      opacity: 0.1;
       font-family: Georgia, serif;
       line-height: 1;
     }
@@ -874,105 +1130,373 @@
       position: relative;
       z-index: 1;
       font-style: italic;
+      color: var(--text-medium);
+      line-height: 1.7;
+      font-size: 1.05rem;
     }
     
     .testimonial-author {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
+      margin-top: auto;
     }
     
     .author-avatar {
-      width: 48px;
-      height: 48px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
-      background: var(--light);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 600;
-      color: var(--primary);
+      font-weight: 700;
+      color: white;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(2, 136, 209, 0.3);
     }
     
     .author-info h4 {
-      font-weight: 600;
-      margin-bottom: 2px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--text-dark);
     }
     
     .author-info p {
       font-size: 0.9rem;
       color: var(--text-light);
     }
-    
-    /* ===== FAQ SECTION ===== */
-    .faq-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .faq-item {
-      background: var(--bg-white);
-      border-radius: var(--radius);
-      margin-bottom: 12px;
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-    }
-    
-    .faq-question {
-      width: 100%;
-      padding: var(--spacing-sm) var(--spacing-md);
+
+    /* ===== CHATBOT WIDGET STYLES ===== */
+    .chatbot-widget {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      z-index: 1600;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .chatbot-toggle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      display: flex;
       align-items: center;
-      background: none;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 10px 30px rgba(2, 136, 209, 0.4);
+      cursor: pointer;
+      border: 3px solid white;
+      transition: var(--transition);
+      animation: pulse-chatbot 2s infinite;
+      position: relative;
+      z-index: 1601;
+    }
+
+    .chatbot-toggle:hover {
+      transform: scale(1.1) rotate(10deg);
+      box-shadow: 0 15px 40px rgba(2, 136, 209, 0.5);
+    }
+
+    .chatbot-toggle.active {
+      animation: none;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+    }
+
+    @keyframes pulse-chatbot {
+      0% { box-shadow: 0 0 0 0 rgba(2, 136, 209, 0.6); }
+      70% { box-shadow: 0 0 0 20px rgba(2, 136, 209, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(2, 136, 209, 0); }
+    }
+
+    .chatbot-container {
+      width: 380px;
+      height: 550px;
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      margin-bottom: 16px;
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      pointer-events: none;
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .chatbot-container.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: all;
+    }
+
+    .chatbot-header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .chatbot-header-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chatbot-avatar {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .chatbot-header-text h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .chatbot-header-text p {
+      font-size: 0.85rem;
+      opacity: 0.9;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .online-indicator {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .chatbot-close {
+      background: rgba(255,255,255,0.2);
       border: none;
-      text-align: left;
-      font-size: 1.05rem;
-      font-weight: 600;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .chatbot-close:hover {
+      background: rgba(255,255,255,0.3);
+      transform: rotate(90deg);
+    }
+
+    .chatbot-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      background: var(--bg-light);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .chatbot-messages::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .chatbot-messages::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .chatbot-messages::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 3px;
+    }
+
+    .message {
+      max-width: 85%;
+      padding: 12px 16px;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      animation: messageSlide 0.3s ease;
+    }
+
+    @keyframes messageSlide {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .message.bot {
+      background: white;
       color: var(--text-dark);
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .message.user {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .quick-replies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .quick-reply {
+      background: rgba(2, 136, 209, 0.1);
+      color: var(--primary);
+      border: 1px solid rgba(2, 136, 209, 0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
       cursor: pointer;
       transition: var(--transition);
+      font-weight: 500;
     }
-    
-    .faq-question:hover {
-      background: var(--light);
+
+    .quick-reply:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
     }
-    
-    .faq-question[aria-expanded="true"] .faq-toggle {
-      transform: rotate(45deg);
+
+    .chatbot-input-area {
+      padding: 16px;
+      background: white;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      display: flex;
+      gap: 12px;
+      align-items: center;
     }
-    
-    .faq-toggle {
+
+    .chatbot-input {
+      flex: 1;
+      padding: 12px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .chatbot-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.1);
+    }
+
+    .chatbot-send {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1.2rem;
       transition: var(--transition);
-      color: var(--primary);
+      box-shadow: var(--shadow-sm);
     }
-    
-    .faq-answer {
-      padding: 0 var(--spacing-md);
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-      color: var(--text-medium);
-      line-height: 1.7;
+
+    .chatbot-send:hover {
+      transform: scale(1.1) rotate(-10deg);
+      box-shadow: var(--shadow-md);
     }
-    
-    .faq-answer.show {
-      padding: 0 var(--spacing-md) var(--spacing-md);
-      max-height: 500px;
+
+    .chatbot-send:active {
+      transform: scale(0.95);
     }
-    
+
+    .typing-indicator {
+      display: flex;
+      gap: 4px;
+      padding: 12px 16px;
+      background: white;
+      border-radius: var(--radius);
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .typing-indicator span {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      animation: typingBounce 1.4s infinite;
+    }
+
+    .typing-indicator span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .typing-indicator span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes typingBounce {
+      0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+      }
+      30% {
+        transform: translateY(-10px);
+        opacity: 1;
+      }
+    }
+
     /* ===== CONTACT SECTION ===== */
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: var(--spacing-lg);
       align-items: start;
     }
     
     .contact-info h3 {
-      font-size: 1.4rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
       margin-bottom: var(--spacing-sm);
+      color: var(--text-dark);
     }
     
     .contact-list {
@@ -983,16 +1507,41 @@
     .contact-list li {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 16px;
+      gap: 16px;
+      margin-bottom: 20px;
       color: var(--text-medium);
+      padding: 16px;
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    
+    .contact-list li:hover {
+      transform: translateX(8px);
+      box-shadow: var(--shadow-md);
     }
     
     .contact-icon {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       color: var(--primary);
       min-width: 24px;
-      margin-top: 3px;
+      margin-top: 2px;
+    }
+    
+    .contact-list li strong {
+      color: var(--text-dark);
+      display: block;
+      margin-bottom: 4px;
+    }
+    
+    .contact-list li a {
+      color: var(--primary);
+      font-weight: 500;
+    }
+    
+    .contact-list li a:hover {
+      text-decoration: underline;
     }
     
     .social-links {
@@ -1002,52 +1551,59 @@
     }
     
     .social-link {
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: var(--light);
+      background: var(--bg-white);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       transition: var(--transition);
       color: var(--primary);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(0,0,0,0.05);
     }
     
     .social-link:hover {
       background: var(--primary);
       color: white;
-      transform: translateY(-3px);
+      transform: translateY(-5px) rotate(5deg);
+      box-shadow: 0 10px 20px rgba(2, 136, 209, 0.3);
     }
     
     .contact-form {
       background: var(--bg-white);
       padding: var(--spacing-md);
       border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(0,0,0,0.05);
     }
     
     .form-group {
-      margin-bottom: var(--spacing-sm);
+      margin-bottom: 24px;
+      position: relative;
     }
     
     .form-label {
       display: block;
-      margin-bottom: 6px;
-      font-weight: 500;
+      margin-bottom: 8px;
+      font-weight: 600;
       color: var(--text-dark);
+      font-size: 0.95rem;
     }
     
     .form-input,
     .form-textarea {
       width: 100%;
-      padding: 12px 16px;
-      border: 2px solid #e0e0e0;
+      padding: 16px;
+      border: 2px solid #e2e8f0;
       border-radius: 12px;
       font-size: 1rem;
       transition: var(--transition);
       background: var(--bg-light);
       color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
     }
     
     .form-input:focus,
@@ -1055,32 +1611,79 @@
       outline: none;
       border-color: var(--primary);
       background: white;
-      box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
+      box-shadow: 0 0 0 4px rgba(2, 136, 209, 0.1);
     }
     
     .form-textarea {
-      min-height: 120px;
+      min-height: 140px;
       resize: vertical;
     }
     
+    .submit-btn {
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(2, 136, 209, 0.4);
+    }
+
     /* ===== FOOTER ===== */
     footer {
-      background: #1a1a1a;
-      color: #f0f0f0;
-      padding: var(--spacing-lg) 0 var(--spacing-md);
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #f8fafc;
+      padding: var(--spacing-xl) 0 var(--spacing-md);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
     }
     
     .footer-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: var(--spacing-md);
-      margin-bottom: var(--spacing-md);
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
     }
     
     .footer-col h4 {
-      font-size: 1.1rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
       margin-bottom: var(--spacing-sm);
       color: white;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
     }
     
     .footer-links {
@@ -1088,114 +1691,110 @@
     }
     
     .footer-links li {
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
     
     .footer-links a {
-      color: #bdbdbd;
+      color: #94a3b8;
       transition: var(--transition);
       font-size: 0.95rem;
+      display: inline-block;
     }
     
     .footer-links a:hover {
       color: white;
-      padding-left: 4px;
+      transform: translateX(5px);
     }
     
     .footer-bottom {
       text-align: center;
       padding-top: var(--spacing-md);
-      border-top: 1px solid #333;
+      border-top: 1px solid rgba(255,255,255,0.1);
       font-size: 0.9rem;
-      color: #9e9e9e;
+      color: #64748b;
     }
     
     .npc-badge {
       display: inline-block;
       background: rgba(255,255,255,0.1);
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-top: 8px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-top: 12px;
       font-size: 0.85rem;
+      color: #cbd5e1;
+      border: 1px solid rgba(255,255,255,0.1);
     }
-    
+
     /* ===== FLOATING WHATSAPP BUTTON ===== */
     .floating-whatsapp {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 60px;
-      height: 60px;
+      bottom: 30px;
+      right: 30px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       background: #25D366;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: var(--shadow-lg);
+      font-size: 2rem;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
       z-index: 1500;
-      animation: pulse 2s infinite;
+      animation: pulse-whatsapp 2s infinite;
       transition: var(--transition);
       text-decoration: none;
       border: 3px solid white;
     }
     
     .floating-whatsapp:hover {
-      transform: scale(1.1) rotate(8deg);
+      transform: scale(1.1) rotate(10deg);
       background: #128C7E;
       animation: none;
+      box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
     }
     
-    @keyframes pulse {
+    @keyframes pulse-whatsapp {
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
-    
-    /* ===== ACCESSIBILITY & UTILITIES ===== */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      html {
-        scroll-behavior: auto;
-      }
-    }
-    
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border-width: 0;
-    }
-    
+
     /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 968px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .steps-grid::before {
+        display: none;
+      }
+
+      .chatbot-container {
+        width: 340px;
+        height: 500px;
+      }
+    }
+    
     @media (max-width: 768px) {
       .nav-menu {
         position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
         background: var(--bg-white);
         flex-direction: column;
-        padding: var(--spacing-lg);
-        gap: 16px;
+        padding: 80px var(--spacing-md) var(--spacing-md);
+        gap: 20px;
         transition: var(--transition);
-        box-shadow: var(--shadow-lg);
-        overflow-y: auto;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        z-index: 1999;
       }
       
       .nav-menu.active {
-        left: 0;
+        right: 0;
       }
       
       .mobile-toggle {
@@ -1208,6 +1807,7 @@
       
       .stat-item {
         min-width: 100px;
+        padding: 12px;
       }
       
       .stat-number {
@@ -1221,15 +1821,29 @@
       
       .btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
       }
       
-      .section {
-        padding: var(--spacing-lg) 0;
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
       
-      .project-image {
-        height: 180px;
+      .floating-whatsapp {
+        width: 56px;
+        height: 56px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.6rem;
+      }
+
+      .chatbot-widget {
+        bottom: 90px;
+        right: 20px;
+      }
+
+      .chatbot-container {
+        width: calc(100vw - 40px);
+        height: 450px;
       }
     }
     
@@ -1242,7 +1856,12 @@
       }
       
       .nav-logo {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+      }
+      
+      .nav-logo-img {
+        width: 36px;
+        height: 36px;
       }
       
       .hero h1 {
@@ -1253,221 +1872,105 @@
         font-size: 1.8rem;
       }
       
-      .project-price {
-        font-size: 1.3rem;
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
       }
       
-      .floating-whatsapp {
-        width: 52px;
-        height: 52px;
-        bottom: 16px;
-        right: 16px;
+      .hive-badge-link {
+        padding: 5px 10px;
+      }
+      
+      .hive-icon-svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+      }
+      
+      .hive-text {
+        font-size: 11px;
+      }
+      
+      .hive-subtext {
+        font-size: 8px;
+      }
+
+      .chatbot-container {
+        width: calc(100vw - 32px);
+        height: 420px;
+      }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html {
+        scroll-behavior: auto;
       }
     }
     
-    /* ===== PRINT STYLES ===== */
-    @media print {
-      .nav, .floating-whatsapp, .btn, .hero-cta-group {
-        display: none !important;
-      }
-      
-      body {
-        background: white;
-        color: black;
-        font-size: 12pt;
-      }
-      
-      .section {
-        padding: 20pt 0;
-      }
-      
-      a {
-        text-decoration: underline;
-        color: black;
-      }
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: white;
+      padding: 8px 16px;
+      z-index: 3000;
+      transition: top 0.3s;
+      font-weight: 600;
     }
-    /* ===== NAVIGATION LOGO STYLES ===== */
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--primary-dark);
-  white-space: nowrap;
-  transition: var(--transition);
-}
-
-.nav-logo:hover {
-  opacity: 0.9;
-}
-
-.nav-logo-img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  border-radius: 8px;
-  background: white;
-  padding: 4px;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-
-.nav-logo:hover .nav-logo-img {
-  transform: scale(1.05);
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .nav-logo-img {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .nav-logo {
-    font-size: 1.2rem;
-    gap: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-logo-img {
-    width: 56px;
-    height: 56px;
-  }
-  
-  .nav-logo span {
-    font-size: 1.1rem;
-  }
-}
+    .skip-link:focus {
+      top: 0;
+    }
   </style>
 </head>
 <body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="water-drop"></div>
+  </div>
+
   <!-- Accessibility Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
   <!-- Navigation -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="container nav-container">
-    <a href="#" class="nav-logo" aria-label="Water of Life NPC Home">
-      <img src="images/logo.jpg" 
-           alt="Water of Life NPC Logo" 
-           class="nav-logo-img"
-           width="48" 
-           height="48"
-           loading="eager">
-      <span>Water of Life</span>
-    </a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo" aria-label="Water of Life NPC Home">
+        <img src="images/logo.jpg" 
+             alt="Water of Life NPC Logo" 
+             class="nav-logo-img"
+             width="44" 
+             height="44"
+             loading="eager">
+        <span>Water of Life</span>
+      </a>
       
       <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
         ☰
       </button>
-      <!-- START HIVE TIMES BADGE (YELLOW EDITION) -->
-<style>
-  /* Badge Container */
-  .hive-badge-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFD700; /* Bright Honey Yellow */
-    border: 2px solid #E5C100; /* Slightly darker yellow border */
-    border-radius: 50px; /* Pill shape */
-    padding: 6px 14px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* The Honeycomb Icon (SVG) */
-  .hive-icon-svg {
-    width: 18px;
-    height: 18px;
-    fill: #000000; /* Black icon for contrast against yellow */
-    margin-right: 8px;
-    transition: transform 0.3s ease;
-  }
-
-  /* Text Container */
-  .hive-text-group {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-  }
-
-  /* Main Text */
-  .hive-text {
-    color: #000000; /* Black text for readability */
-    font-size: 13px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  /* Sub Text */
-  .hive-subtext {
-    font-size: 9px;
-    font-weight: 600;
-    color: #333333;
-    text-transform: uppercase;
-  }
-
-  /* Hover Effects */
-  .hive-badge-link:hover {
-    background-color: #E5C100; /* Darker yellow on hover */
-    border-color: #C9A900;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-
-  .hive-badge-link:hover .hive-icon-svg {
-    transform: scale(1.1); /* Icon grows slightly */
-  }
-
-  /* Mobile Adjustments */
-  @media (max-width: 480px) {
-    .hive-badge-link {
-      padding: 5px 10px;
-    }
-    .hive-icon-svg {
-      width: 16px;
-      height: 16px;
-      margin-right: 6px;
-    }
-    .hive-text {
-      font-size: 11px;
-    }
-    .hive-subtext {
-      font-size: 8px;
-      /* Keep subtext on mobile but ensure it fits */
-    }
-  }
-</style>
-
-<!-- The Link -->
-<a href="https://hivetimes.co.za" class="hive-badge-link" target="_blank" rel="noopener" title="Visit Hive Times">
-  
-  <!-- Honeycomb SVG Icon -->
-  <svg class="hive-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2L14.5 6.5L19 6.5L16.5 11L19 15.5L14.5 15.5L12 20L9.5 15.5L5 15.5L7.5 11L5 6.5L9.5 6.5L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
-    <path d="M12 7L13.5 9.5L16 9.5L14.5 12L16 14.5L13.5 14.5L12 17L10.5 14.5L8 14.5L9.5 12L8 9.5L10.5 9.5L12 7Z" fill="currentColor"/>
-  </svg>
-
-  <div class="hive-text-group">
-    <span class="hive-text">HIVE</span>
-    <span class="hive-subtext">Member</span>
-  </div>
-
-</a>
-<!-- END HIVE TIMES BADGE -->
+      
+      <!-- HIVE TIMES BADGE -->
+      <a href="https://hivetimes.co.za" class="hive-badge-link" target="_blank" rel="noopener" title="Visit Hive Times">
+        <svg class="hive-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L14.5 6.5L19 6.5L16.5 11L19 15.5L14.5 15.5L12 20L9.5 15.5L5 15.5L7.5 11L5 6.5L9.5 6.5L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          <path d="M12 7L13.5 9.5L16 9.5L14.5 12L16 14.5L13.5 14.5L12 17L10.5 14.5L8 14.5L9.5 12L8 9.5L10.5 9.5L12 7Z" fill="currentColor"/>
+        </svg>
+        <div class="hive-text-group">
+          <span class="hive-text">HIVE</span>
+          <span class="hive-subtext">Member</span>
+        </div>
+      </a>
       
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#impact" class="nav-link">Impact</a></li>
         <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
-        <li><a href="#faq" class="nav-link">FAQ</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
         <li><a href="https://hivetimes.co.za/" class="nav-link" target="_blank" rel="noopener">Hive Times</a></li>
         <li><a href="#donate" class="nav-link nav-cta">Donate Now</a></li>
@@ -1476,13 +1979,13 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero" role="banner">
+  <header class="hero" role="banner" id="home">
     <div class="waterfall-bg" aria-hidden="true">
       <div class="waterfall-layer"></div>
       <div class="waterfall-layer"></div>
       <div class="waterfall-layer"></div>
       <div class="waterfall-layer"></div>
-      <div class="droplets" id="droplets"></div>
+      <div class="hero-particles" id="hero-particles"></div>
     </div>
     <div class="water-surface" aria-hidden="true"></div>
     
@@ -1494,28 +1997,10 @@
       
       <h1>Bring Clean Water & Hope to Malawi</h1>
       
-      <p class="hero-subtitle">
-        Every donation builds wells, boreholes, and masjids for communities in need. 
-        Sadaqa Jariya that flows forever. In loving memory of Yusuf Saloojee.
-      </p>
-      
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-number" id="wells-count">0</span>
-          <span class="stat-label">Wells Built</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" id="people-count">0</span>
-          <span class="stat-label">Lives Changed</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" id="villages-count">0</span>
-          <span class="stat-label">Villages Served</span>
-        </div>
-      </div>
+      <p class="hero-subtitle" id="typing-text"></p>
       
       <div class="hero-cta-group">
-        <a href="https://wa.me/27822225556?text=I%20want%20to%20donate%20to%20Water%20of%20Life%20NPC%20-%20Malawi%20Projects.%20Please%20send%20donation%20details." 
+        <a href="https://wa.me/27822225556?text=Assalamu%20Alaikum%2C%20I%20want%20to%20donate%20to%20Water%20of%20Life%20NPC%20-%20Malawi%20Projects.%20Please%20send%20donation%20details." 
            class="btn btn-primary"
            aria-label="Donate via WhatsApp">
           💬 Donate via WhatsApp
@@ -1525,7 +2010,7 @@
         </a>
       </div>
       
-      <p style="margin-top: 20px; opacity: 0.9; font-size: 0.95rem;">
+      <p style="margin-top: 24px; opacity: 0.9; font-size: 0.9rem; font-weight: 500;">
         NPC 2025/970209/08 • Registered South African Non-Profit Company
       </p>
     </div>
@@ -1535,9 +2020,8 @@
     <!-- Projects Section -->
     <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2 class="section-title" id="projects-title">Our Projects</h2>
-          <div class="divider"></div>
           <p class="section-subtitle">
             Choose how you'd like to make a difference. Every project is 100% funded by donations, 
             with photos and reports sent upon completion.
@@ -1546,11 +2030,11 @@
         
         <div class="projects-grid">
           <!-- Water Well -->
-          <article class="project-card">
+          <article class="project-card reveal">
             <div class="project-image">
               <img src="images/waterwell.jpg" 
                    alt="Community member using a bucket water well in rural Malawi"
-                   width="400" height="200"
+                   width="400" height="220"
                    loading="lazy">
               <span class="project-badge">Most Popular</span>
             </div>
@@ -1562,12 +2046,11 @@
                 Easy to maintain and community-managed.
               </p>
               <ul class="project-features">
-            
                 <li>Includes hygiene training</li>
                 <li>Community ownership model</li>
               </ul>
-              <a href="https://wa.me/27822225556?text=I%20want%20to%20donate%20R8500%20for%20a%20Water%20Well%20in%20Malawi.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
-                 class="btn btn-primary card-cta"
+              <a href="https://wa.me/27822225556?text=Assalamu%20Alaikum%2C%20I%20want%20to%20donate%20R8500%20for%20a%20Water%20Well%20in%20Malawi.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
+                 class="btn card-cta ripple-btn"
                  aria-label="Donate R8500 for a Water Well">
                 Donate This Project
               </a>
@@ -1575,38 +2058,37 @@
           </article>
           
           <!-- Borehole -->
-          <article class="project-card">
+          <article class="project-card reveal">
             <div class="project-image">
               <img src="images/borehole.jpg" 
                    alt="Hand pump borehole providing clean water in Malawi village"
-                   width="400" height="200"
+                   width="400" height="220"
                    loading="lazy">
             </div>
             <div class="project-content">
-              <h3 class="project-title">⚙️ Borehole (Pump System)</h3>
+              <h3 class="project-title">️ Borehole (Pump System)</h3>
               <div class="project-price">R 23,500</div>
               <p class="project-description">
                 Deep groundwater access with durable hand pump. Provides reliable water year-round, 
                 even during dry seasons.
               </p>
               <ul class="project-features">
-                
                 <li>Professional drilling & installation</li>
                 <li>5-year maintenance support</li>
               </ul>
-              <a href="https://wa.me/27822225556?text=I%20want%20to%20donate%20R23500%20for%20a%20Borehole%20in%20Malawi.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
-                 class="btn btn-primary card-cta">
+              <a href="https://wa.me/27822225556?text=Assalamu%20Alaikum%2C%20I%20want%20to%20donate%20R23500%20for%20a%20Borehole%20in%20Malawi.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
+                 class="btn card-cta ripple-btn">
                 Donate This Project
               </a>
             </div>
           </article>
           
           <!-- Masjid -->
-          <article class="project-card">
+          <article class="project-card reveal">
             <div class="project-image">
               <img src="images/masjid.jpg" 
                    alt="Small community masjid built in Malawi"
-                   width="400" height="200"
+                   width="400" height="220"
                    loading="lazy">
               <span class="project-badge">Sadaqa Jariya</span>
             </div>
@@ -1622,19 +2104,19 @@
                 <li>2 Wudu + 2 Ablution facilities</li>
                 <li>Community-managed maintenance</li>
               </ul>
-              <a href="https://wa.me/27822225556?text=I%20want%20to%20donate%20R190000%20to%20Build%20a%20Masjid%20in%20Malawi.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
-                 class="btn btn-primary card-cta">
+              <a href="https://wa.me/27822225556?text=Assalamu%20Alaikum%2C%20I%20want%20to%20donate%20R190000%20to%20Build%20a%20Masjid%20in%20Malawi.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
+                 class="btn card-cta ripple-btn">
                 Donate This Project
               </a>
             </div>
           </article>
           
           <!-- Sheep -->
-          <article class="project-card">
+          <article class="project-card reveal">
             <div class="project-image">
               <img src="images/sheep.jpg" 
                    alt="Sheep for Qurbani distribution in Malawi"
-                   width="400" height="200"
+                   width="400" height="220"
                    loading="lazy">
             </div>
             <div class="project-content">
@@ -1649,19 +2131,19 @@
                 <li>Distributed to 10-15 families</li>
                 <li>Eid-ul-Adha or anytime</li>
               </ul>
-              <a href="https://wa.me/27822225556?text=I%20want%20to%20donate%20R600%20for%20a%20Sheep%20Qurbani%20in%20Malawi.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
-                 class="btn btn-primary card-cta">
+              <a href="https://wa.me/27822225556?text=Assalamu%20Alaikum%2C%20I%20want%20to%20donate%20R600%20for%20a%20Sheep%20Qurbani%20in%20Malawi.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
+                 class="btn card-cta ripple-btn">
                 Donate This Project
               </a>
             </div>
           </article>
           
           <!-- Cow -->
-          <article class="project-card">
+          <article class="project-card reveal">
             <div class="project-image">
               <img src="images/cow.jpg" 
                    alt="Cow for large-scale Qurbani distribution"
-                   width="400" height="200"
+                   width="400" height="220"
                    loading="lazy">
             </div>
             <div class="project-content">
@@ -1676,24 +2158,24 @@
                 <li>Feeds 70-100 people</li>
                 <li>Certificate of completion</li>
               </ul>
-              <a href="https://wa.me/27822225556?text=I%20want%20to%20donate%20R4500%20for%20a%20Cow%20Qurbani%20Share%20in%20Malawi.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
-                 class="btn btn-primary card-cta">
+              <a href="https://wa.me/27822225556?text=Assalamu%20Alaikum%2C%20I%20want%20to%20donate%20R4500%20for%20a%20Cow%20Qurbani%20Share%20in%20Malawi.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
+                 class="btn card-cta ripple-btn">
                 Donate This Project
               </a>
             </div>
           </article>
           
           <!-- Custom Donation -->
-          <article class="project-card" style="border: 2px dashed var(--primary); background: var(--light);">
-            <div class="project-content" style="text-align: center; justify-content: center;">
-              <div style="font-size: 3rem; margin-bottom: 12px;">💙</div>
+          <article class="project-card reveal" style="border: 2px dashed var(--primary); background: linear-gradient(135deg, #f0f9ff, #e0f2fe);">
+            <div class="project-content" style="text-align: center; justify-content: center; padding: 3rem 2rem;">
+              <div style="font-size: 3.5rem; margin-bottom: 16px; animation: float 3s ease-in-out infinite;">💙</div>
               <h3 class="project-title">Custom Donation</h3>
               <p class="project-description">
                 Every amount makes a difference. Donate any amount towards our general fund 
                 and we'll allocate it to the most urgent need.
               </p>
-              <a href="https://wa.me/27822225556?text=I%20want%20to%20make%20a%20custom%20donation%20to%20Water%20of%20Life%20NPC.%20Please%20advise%20on%20how%20to%20proceed.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
-                 class="btn btn-primary card-cta">
+              <a href="https://wa.me/27822225556?text=Assalamu%20Alaikum%2C%20I%20want%20to%20make%20a%20custom%20donation%20to%20Water%20of%20Life%20NPC.%20Please%20advise%20on%20how%20to%20proceed.%20Name%3A%20%5BYour%20Name%5D.%20Contact%3A%20%5BNumber%5D" 
+                 class="btn card-cta ripple-btn">
                 Donate Any Amount
               </a>
             </div>
@@ -1705,39 +2187,38 @@
     <!-- Impact Section -->
     <section class="section impact-section" id="impact" aria-labelledby="impact-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2 class="section-title" id="impact-title">Our Impact</h2>
-          <div class="divider"></div>
           <p class="section-subtitle">
             Transparent reporting. Real change. Every project documented and shared with donors.
           </p>
         </div>
         
         <div class="impact-grid">
-          <div class="impact-card">
+          <div class="impact-card reveal">
             <div class="impact-icon" aria-hidden="true">💧</div>
-            <span class="impact-number" id="water-count">0</span>
+            <span class="impact-number" data-target="85000" data-suffix="L">0</span>
             <span class="impact-label">Liters of Clean Water Daily</span>
           </div>
-          <div class="impact-card">
+          <div class="impact-card reveal">
             <div class="impact-icon" aria-hidden="true">🕌</div>
-            <span class="impact-number" id="masjid-count">0</span>
+            <span class="impact-number" data-target="3" data-suffix="">0</span>
             <span class="impact-label">Masjids Built</span>
           </div>
-          <div class="impact-card">
-            <div class="impact-icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
-            <span class="impact-number" id="families-count">0</span>
+          <div class="impact-card reveal">
+            <div class="impact-icon" aria-hidden="true">👨‍‍👧‍</div>
+            <span class="impact-number" data-target="320" data-suffix="+">0</span>
             <span class="impact-label">Families Supported</span>
           </div>
-          <div class="impact-card">
+          <div class="impact-card reveal">
             <div class="impact-icon" aria-hidden="true">📸</div>
-            <span class="impact-number">100%</span>
+            <span class="impact-number" data-target="100" data-suffix="%">0</span>
             <span class="impact-label">Projects Documented</span>
           </div>
         </div>
         
-        <div style="text-align: center; margin-top: var(--spacing-lg);">
-          <a href="#contact" class="btn btn-secondary" style="background: var(--primary); color: white;">
+        <div style="text-align: center; margin-top: var(--spacing-lg);" class="reveal">
+          <a href="#contact" class="btn btn-secondary" style="background: var(--primary); color: white; border: none;">
             See Project Reports →
           </a>
         </div>
@@ -1747,31 +2228,30 @@
     <!-- How It Works -->
     <section class="section" id="how-it-works" aria-labelledby="how-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2 class="section-title" id="how-title">How Your Donation Works</h2>
-          <div class="divider"></div>
           <p class="section-subtitle">
             Simple, transparent, and impactful. Here's exactly what happens when you donate.
           </p>
         </div>
         
         <div class="steps-grid">
-          <div class="step-card">
+          <div class="step-card reveal">
             <div class="step-number">1</div>
             <h3 class="step-title">You Donate</h3>
             <p class="step-desc">Choose a project or give generally. Pay via WhatsApp, EFT, or card.</p>
           </div>
-          <div class="step-card">
+          <div class="step-card reveal">
             <div class="step-number">2</div>
             <h3 class="step-title">We Implement</h3>
             <p class="step-desc">Our Malawi team sources materials, hires local labor, and builds.</p>
           </div>
-          <div class="step-card">
+          <div class="step-card reveal">
             <div class="step-number">3</div>
             <h3 class="step-title">You Receive Proof</h3>
             <p class="step-desc">Photos, videos, and completion reports sent directly to you.</p>
           </div>
-          <div class="step-card">
+          <div class="step-card reveal">
             <div class="step-number">4</div>
             <h3 class="step-title">Impact Continues</h3>
             <p class="step-desc">Your Sadaqa Jariya benefits the community for generations.</p>
@@ -1783,16 +2263,15 @@
     <!-- Donation Methods -->
     <section class="section" id="donate" aria-labelledby="donate-title" style="background: var(--light);">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2 class="section-title" id="donate-title">Ways to Donate</h2>
-          <div class="divider"></div>
           <p class="section-subtitle">
             Secure, convenient options. All donations go directly to projects – zero admin fees.
           </p>
         </div>
         
         <div class="donation-methods">
-          <div class="method-card">
+          <div class="method-card reveal">
             <div class="method-title">
               <span aria-hidden="true">💬</span>
               <span>WhatsApp (Fastest)</span>
@@ -1804,13 +2283,13 @@
               🇲🇼 +265 994 82 0676<br><br>
               Message us with your chosen project and we'll guide you through secure payment.
             </div>
-            <a href="https://wa.me/27822225556?text=I%20want%20to%20donate%20to%20Water%20of%20Life%20NPC.%20Please%20send%20donation%20details." 
-               class="btn btn-primary" style="margin-top: 12px; width: 100%;">
+            <a href="https://wa.me/27822225556?text=Assalamu%20Alaikum%2C%20I%20want%20to%20donate%20to%20Water%20of%20Life%20NPC.%20Please%20send%20donation%20details." 
+               class="btn btn-primary ripple-btn" style="margin-top: 16px; width: 100%;">
               Start WhatsApp Donation
             </a>
           </div>
           
-          <div class="method-card">
+          <div class="method-card reveal">
             <div class="method-title">
               <span aria-hidden="true">🏦</span>
               <span>Bank Transfer (EFT)</span>
@@ -1823,12 +2302,13 @@
               <strong>Code:</strong> 250 955 | SWIFT: FIRNZAJJ<br>
               <strong>Reference:</strong> Your Name & Project
               <div class="bank-note">
-                ⚠️ Add 1% for cash deposits. Email POP to donations@wateroflife.org.za
+                <span>⚠️</span>
+                <span>Add 1% for cash deposits. Email POP to donations@wateroflife.org.za</span>
               </div>
             </div>
           </div>
           
-          <div class="method-card">
+          <div class="method-card reveal">
             <div class="method-title">
               <span aria-hidden="true">💳</span>
               <span>Card / Online (Coming Soon)</span>
@@ -1839,7 +2319,7 @@
               <strong>Zakat Calculator:</strong> Use our tool to calculate your obligation 
               and donate directly to qualifying projects.
             </div>
-            <a href="#contact" class="btn btn-secondary" style="margin-top: 12px; width: 100%;">
+            <a href="#contact" class="btn btn-secondary ripple-btn" style="margin-top: 16px; width: 100%; color: var(--primary); border: 2px solid var(--primary);">
               Notify Me When Live
             </a>
           </div>
@@ -1850,16 +2330,15 @@
     <!-- Testimonials -->
     <section class="section" aria-labelledby="testimonials-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2 class="section-title" id="testimonials-title">Donor Stories</h2>
-          <div class="divider"></div>
           <p class="section-subtitle">
             Hear from others who've made a difference with Water of Life NPC.
           </p>
         </div>
         
         <div class="testimonials-grid">
-          <div class="testimonial-card">
+          <div class="testimonial-card reveal">
             <p class="testimonial-text">
               "I donated for a water well in memory of my father. Receiving photos of the 
               community celebrating clean water was incredibly moving. Truly Sadaqa Jariya."
@@ -1873,7 +2352,7 @@
             </div>
           </div>
           
-          <div class="testimonial-card">
+          <div class="testimonial-card reveal">
             <p class="testimonial-text">
               "The transparency is what convinced me. They sent a video of the borehole 
               being drilled and the first water flow. Every rand accounted for."
@@ -1887,7 +2366,7 @@
             </div>
           </div>
           
-          <div class="testimonial-card">
+          <div class="testimonial-card reveal">
             <p class="testimonial-text">
               "Our mosque pooled funds for a masjid share. The completion report included 
               GPS coordinates and a letter from the village imam. Beautifully done."
@@ -1904,100 +2383,34 @@
       </div>
     </section>
     
-    <!-- FAQ Section -->
-    <section class="section" id="faq" aria-labelledby="faq-title" style="background: var(--light);">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
-          <div class="divider"></div>
-          <p class="section-subtitle">
-            Everything you need to know about donating with confidence.
-          </p>
-        </div>
-        
-        <div class="faq-container">
-          
-          
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq2">
-              <span>How do I know my money reaches Malawi?</span>
-              <span class="faq-toggle" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" id="faq2">
-              100% of donations go directly to projects. We maintain zero admin overhead through 
-              volunteer management and in-kind support. Our Malawi field team provides:
-              <ul style="margin: 12px 0 0 20px; color: var(--text-medium);">
-                <li>Pre-project photos and location details</li>
-                <li>Progress updates during construction</li>
-                <li>Completion report with photos/video</li>
-                <li>Community testimonial letters</li>
-              </ul>
-              All documentation is shared with donors within 30 days of project completion.
-            </div>
-          </div>
-          
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq3">
-              <span>Can I donate Zakat through Water of Life?</span>
-              <span class="faq-toggle" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" id="faq3">
-              Yes. All our water access projects (wells, boreholes) and community infrastructure 
-              (masjids) qualify for Zakat under Islamic jurisprudence. Our projects serve:
-              <ul style="margin: 12px 0 0 20px; color: var(--text-medium);">
-                <li>The poor and needy (Fuqara & Masakin)</li>
-                <li>Those in debt (Al-Gharimin)</li>
-                <li>Wayfarers and travelers (Ibnu Sabil)</li>
-              </ul>
-              Use our Zakat calculator (coming soon) or contact us to ensure your donation 
-              meets all Sharia requirements. We provide Zakat-specific receipts upon request.
-            </div>
-          </div>
-          
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq4">
-              <span>What if I want to donate anonymously?</span>
-              <span class="faq-toggle" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" id="faq4">
-              Absolutely. Simply indicate "Anonymous" in your WhatsApp message or bank reference. 
-              We respect all privacy preferences. You'll still receive completion reports 
-              (without your name shared publicly) so you can see your impact.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
     <!-- Contact Section -->
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2 class="section-title" id="contact-title">Get in Touch</h2>
-          <div class="divider"></div>
           <p class="section-subtitle">
             Questions? Want to partner? We'd love to hear from you.
           </p>
         </div>
         
         <div class="contact-grid">
-          <div class="contact-info">
+          <div class="contact-info reveal-left">
             <h3>Contact Details</h3>
             <ul class="contact-list">
               <li>
                 <span class="contact-icon" aria-hidden="true">📱</span>
                 <div>
-                  <strong>WhatsApp (SA)</strong><br>
+                  <strong>WhatsApp (SA)</strong>
                   <a href="https://wa.me/27822225556">+27 82 222 5556</a><br>
-                  <small>Shiraz Saloojee • 8am-8pm SAST</small>
+                  <small style="color: var(--text-light);">Shiraz Saloojee • 8am-8pm SAST</small>
                 </div>
               </li>
               <li>
                 <span class="contact-icon" aria-hidden="true">📱</span>
                 <div>
-                  <strong>WhatsApp (Malawi)</strong><br>
+                  <strong>WhatsApp (Malawi)</strong>
                   <a href="https://wa.me/265994820676">+265 994 82 0676</a><br>
-                  <small>Sadiq Pandor • Field Operations</small>
+                  <small style="color: var(--text-light);">Sadiq Pandor • Field Operations</small>
                 </div>
               </li>
               <li>
@@ -2026,7 +2439,7 @@
             </div>
           </div>
           
-          <form class="contact-form" id="inquiry-form" aria-label="Contact form">
+          <form class="contact-form reveal" id="inquiry-form" aria-label="Contact form">
             <div class="form-group">
               <label class="form-label" for="name">Your Name *</label>
               <input type="text" id="name" name="name" class="form-input" required 
@@ -2047,10 +2460,10 @@
               <textarea id="message" name="message" class="form-textarea" required 
                         placeholder="I'm interested in donating to... / I have a question about..."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <button type="submit" class="submit-btn ripple-btn">
               Send Message →
             </button>
-            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 12px; text-align: center;">
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 16px; text-align: center;">
               We respond within 24 hours. Your data is protected per POPIA.
             </p>
           </form>
@@ -2065,11 +2478,11 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Water of Life NPC</h4>
-          <p style="color: #bdbdbd; margin-top: 12px; font-size: 0.95rem;">
+          <p style="color: #94a3b8; margin-top: 16px; font-size: 0.95rem; line-height: 1.7;">
             Providing clean water, boreholes, and masjids in Malawi. 
             100% transparent. Sadaqa Jariya that flows forever.
           </p>
-          <span class="npc-badge" style="margin-top: 12px;">NPC 2025/970209/08</span>
+          <span class="npc-badge">NPC 2025/970209/08</span>
         </div>
         
         <div class="footer-col">
@@ -2078,7 +2491,6 @@
             <li><a href="#projects">Our Projects</a></li>
             <li><a href="#impact">Impact Reports</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#faq">FAQs</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
@@ -2108,7 +2520,7 @@
       <div class="footer-bottom">
         <p>
           &copy; <span id="year">2026</span> Water of Life NPC. All rights reserved.<br>
-          <small style="display: block; margin-top: 8px; opacity: 0.8;">
+          <small style="display: block; margin-top: 12px; opacity:0.8; line-height: 1.6;">
             Registered South African Non-Profit Company • NPC 2025/970209/08<br>
             In loving memory of Yusuf Saloojee • Sadaqa Jariya
           </small>
@@ -2118,15 +2530,58 @@
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/27822225556?text=I%20have%20a%20question%20about%20donating%20to%20Water%20of%20Life%20NPC.%20Please%20assist." 
+  <a href="https://wa.me/27822225556?text=Assalamu%20Alaikum%2C%20I%20have%20a%20question%20about%20donating%20to%20Water%20of%20Life%20NPC.%20Please%20assist." 
      class="floating-whatsapp" 
      aria-label="Chat with us on WhatsApp"
      title="Chat on WhatsApp">
     💬
   </a>
 
+  <!-- CHATBOT WIDGET -->
+  <div class="chatbot-widget">
+    <div class="chatbot-container" id="chatbotContainer">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <div class="chatbot-avatar">💧</div>
+          <div class="chatbot-header-text">
+            <h3>Water of Life Assistant</h3>
+            <p><span class="online-indicator"></span> Online now</p>
+          </div>
+        </div>
+        <button class="chatbot-close" id="chatbotClose" aria-label="Close chat">✕</button>
+      </div>
+      
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot">
+          Assalamu Alaikum! 👋 Welcome to Water of Life NPC. How can I help you today?
+          <div class="quick-replies">
+            <button class="quick-reply" onclick="sendQuickReply('How do I donate?')">How do I donate?</button>
+            <button class="quick-reply" onclick="sendQuickReply('What projects do you have?')">Our projects</button>
+            <button class="quick-reply" onclick="sendQuickReply('Is my donation tax deductible?')">Tax deduction?</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chatbot-input-area">
+        <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your question..." maxlength="200">
+        <button class="chatbot-send" id="chatbotSend" aria-label="Send message">➤</button>
+      </div>
+    </div>
+    
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat assistant">
+      💬
+    </button>
+  </div>
+
   <!-- JavaScript for Interactivity -->
   <script>
+    // ===== PRELOADER =====
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('preloader').classList.add('hidden');
+      }, 800);
+    });
+
     // ===== MOBILE NAVIGATION TOGGLE =====
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
@@ -2135,10 +2590,9 @@
       const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
       mobileToggle.setAttribute('aria-expanded', !expanded);
       navMenu.classList.toggle('active');
-      mobileToggle.innerHTML = !expanded ? '✕' : '☰';
+      mobileToggle.innerHTML = !expanded ? '' : '☰';
     });
     
-    // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -2146,7 +2600,7 @@
         mobileToggle.innerHTML = '☰';
       });
     });
-    
+
     // ===== NAV SCROLL EFFECT =====
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => {
@@ -2156,142 +2610,380 @@
         nav.classList.remove('scrolled');
       }
     });
-    
-    // ===== FAQ ACCORDION =====
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        const answer = document.getElementById(button.getAttribute('aria-controls'));
-        
-        // Close all
-        document.querySelectorAll('.faq-question').forEach(btn => {
-          btn.setAttribute('aria-expanded', 'false');
-        });
-        document.querySelectorAll('.faq-answer').forEach(ans => {
-          ans.classList.remove('show');
-        });
-        
-        // Toggle current
-        if (!expanded) {
-          button.setAttribute('aria-expanded', 'true');
-          answer.classList.add('show');
+
+    // ===== SCROLL REVEAL ANIMATIONS =====
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          
+          if (entry.target.querySelector('.impact-number')) {
+            animateCounters(entry.target);
+          }
         }
       });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal, .reveal-left').forEach(el => {
+      observer.observe(el);
     });
-    
-    // ===== FORM SUBMISSION =====
+
+    // ===== ANIMATED COUNTERS =====
+    function animateCounters(container) {
+      const counters = container.querySelectorAll('.impact-number, .stat-number');
+      counters.forEach(counter => {
+        if (counter.dataset.animated) return;
+        counter.dataset.animated = 'true';
+        
+        const target = parseInt(counter.getAttribute('data-target'));
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            counter.textContent = target.toLocaleString() + suffix;
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.floor(current).toLocaleString() + suffix;
+          }
+        }, 16);
+      });
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        animateCounters(document.querySelector('.hero'));
+      }, 1000);
+    });
+
+    // ===== FORM SUBMISSION TO WHATSAPP =====
     const form = document.getElementById('inquiry-form');
     form?.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      // Get form data
       const formData = new FormData(form);
       const name = formData.get('name');
+      const email = formData.get('email');
+      const phone = formData.get('phone');
+      const message = formData.get('message');
       
-      // Show success message (in production, this would send to backend)
-      alert(`Thank you, ${name}! Your message has been received. We'll respond within 24 hours via WhatsApp or email.`);
+      const whatsappMessage = `Assalamu Alaikum,%0A%0A*New Inquiry from Website*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Message:* ${message}`;
+      
+      window.open(`https://wa.me/27822225556?text=${whatsappMessage}`, '_blank');
       form.reset();
-      
-      // Optional: Redirect to WhatsApp with pre-filled message
-      // window.location.href = `https://wa.me/27822225556?text=New inquiry from ${encodeURIComponent(name)}: ${encodeURIComponent(formData.get('message'))}`;
     });
-    
-    // ===== ANIMATED COUNTERS =====
-    const animateValue = (element, start, end, duration) => {
-      let startTimestamp = null;
-      const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        const value = Math.floor(progress * (end - start) + start);
-        element.textContent = value.toLocaleString() + (element.dataset.suffix || '');
-        if (progress < 1) {
-          window.requestAnimationFrame(step);
-        }
-      };
-      window.requestAnimationFrame(step);
-    };
-    
-    // Initialize counters when in view (simplified version)
-    const initCounters = () => {
-      const counters = [
-        { id: 'wells-count', end: 42, suffix: '+' },
-        { id: 'people-count', end: 12500, suffix: '+' },
-        { id: 'villages-count', end: 28, suffix: '' },
-        { id: 'water-count', end: 85000, suffix: 'L' },
-        { id: 'masjid-count', end: 3, suffix: '' },
-        { id: 'families-count', end: 320, suffix: '+' }
-      ];
-      
-      counters.forEach(counter => {
-        const el = document.getElementById(counter.id);
-        if (el && !el.dataset.animated) {
-          el.dataset.animated = 'true';
-          el.dataset.suffix = counter.suffix || '';
-          animateValue(el, 0, counter.end, 2000);
-        }
-      });
-    };
-    
-    // Run counters on load and when scrolled into view
-    window.addEventListener('load', initCounters);
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) initCounters();
-    }, { once: true });
-    
-    // ===== WATER DROPLETS ANIMATION =====
-    const dropletsContainer = document.getElementById('droplets');
-    if (dropletsContainer) {
-      for (let i = 0; i < 35; i++) {
-        const droplet = document.createElement('div');
-        droplet.classList.add('droplet');
-        droplet.style.left = `${Math.random() * 100}%`;
-        droplet.style.animationDelay = `${Math.random() * 3}s`;
-        droplet.style.animationDuration = `${2 + Math.random() * 2}s`;
-        dropletsContainer.appendChild(droplet);
+
+    // ===== WATER DROPLETS & PARTICLES ANIMATION =====
+    const particlesContainer = document.getElementById('hero-particles');
+    if (particlesContainer) {
+      for (let i = 0; i < 30; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        const size = Math.random() * 6 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+        particle.style.animationDuration = `${3 + Math.random() * 4}s`;
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    // ===== TYPING EFFECT FOR HERO =====
+    const typingText = "Every donation builds wells, boreholes, and masjids for communities in need. Join us in bringing sustainable change to Malawi.";
+    const typingElement = document.getElementById('typing-text');
+    let charIndex = 0;
+
+    function typeWriter() {
+      if (charIndex < typingText.length) {
+        typingElement.textContent += typingText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, 30);
       }
     }
     
+    setTimeout(typeWriter, 1000);
+
+    // ===== RIPPLE EFFECT ON BUTTONS =====
+    document.querySelectorAll('.ripple-btn, .btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.cssText = `
+          position: absolute;
+          width: ${size}px;
+          height: ${size}px;
+          left: ${x}px;
+          top: ${y}px;
+          background: rgba(255,255,255,0.4);
+          border-radius: 50%;
+          transform: scale(0);
+          animation: ripple-animation 0.6s linear;
+          pointer-events: none;
+        `;
+        
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // ===== PARALLAX EFFECT ON HERO =====
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const heroContent = document.querySelector('.hero-content');
+      if (heroContent && scrolled < window.innerHeight) {
+        heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+        heroContent.style.opacity = 1 - (scrolled / 700);
+      }
+    });
+
     // ===== SET CURRENT YEAR IN FOOTER =====
     document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // ===== LAZY LOAD IMAGES (Fallback for older browsers) =====
-    if ('loading' in HTMLImageElement.prototype) {
-      // Native lazy loading supported
-    } else {
-      // Fallback: load images immediately
-      document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-        img.removeAttribute('loading');
+
+    // ===== ACTIVE NAV LINK HIGHLIGHTING =====
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
       });
-    }
-    
-    // ===== CONSOLE LOG FOR DEVELOPERS =====
-    console.log('💧 Water of Life NPC - SEO Optimized Charity Site Loaded');
-    console.log('✅ Schema markup active');
-    console.log('✅ Mobile-first responsive design');
-    console.log('✅ Accessibility features enabled');
-    console.log('✅ Performance optimized (lazy load, critical CSS)');
-  </script>
-  
-  <!-- Structured Data for Breadcrumbs (Additional) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Water of Life NPC - Donate Clean Water to Malawi",
-    "description": "100% transparent Islamic charity building water wells, boreholes and masjids in Malawi. Sadaqa Jariya donations.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Water of Life NPC",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://wateroflife.org.za/images/logo.png"
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // ===== CHATBOT FUNCTIONALITY =====
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotContainer = document.getElementById('chatbotContainer');
+    const chatbotClose = document.getElementById('chatbotClose');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotSend = document.getElementById('chatbotSend');
+
+    // Knowledge base for the chatbot
+    const knowledgeBase = {
+      'donate': {
+        keywords: ['donate', 'donation', 'give', 'contribute', 'payment', 'pay'],
+        response: 'You can donate via WhatsApp (+27 82 222 5556), bank transfer (FNB Account: 6318 9294 225), or soon via card payment. 100% of donations go directly to projects!',
+        quickReplies: ['Bank details', 'WhatsApp number', 'Project prices']
+      },
+      'projects': {
+        keywords: ['project', 'projects', 'what do you do', 'offer', 'provide'],
+        response: 'We build water wells (R8,500), boreholes (R23,500), masjids (R190,000), and provide Qurbani sheep (R600) and cow shares (R4,500) in Malawi.',
+        quickReplies: ['Water well cost', 'Borehole cost', 'Masjid cost']
+      },
+      'tax': {
+        keywords: ['tax', 'deductible', 'section 18a', 'pbo', 'sars'],
+        response: 'We are a registered NPC (2025/970209/08) and currently applying for PBO status with SARS. Once approved, donations will be tax-deductible under Section 18A.',
+        quickReplies: ['NPC number', 'Registration details']
+      },
+      'zakat': {
+        keywords: ['zakat', 'zakaat', 'islamic', 'sharia', 'halal'],
+        response: 'Yes! All our water and community projects qualify for Zakat. We serve the poor, needy, and those in debt. Contact us for Zakat-specific receipts.',
+        quickReplies: ['Zakat eligibility', 'How to pay Zakat']
+      },
+      'transparency': {
+        keywords: ['transparent', 'proof', 'report', 'photo', 'video', 'accountability'],
+        response: 'We provide 100% transparency! You\'ll receive photos, videos, GPS coordinates, and completion reports for every project within 30 days.',
+        quickReplies: ['See examples', 'How it works']
+      },
+      'contact': {
+        keywords: ['contact', 'reach', 'email', 'phone', 'whatsapp', 'sadiq', 'shiraz'],
+        response: 'You can reach us via WhatsApp: Shiraz (SA) +27 82 222 5556 or Sadiq (Malawi) +265 994 82 0676. Email: info@wateroflife.org.za',
+        quickReplies: ['WhatsApp SA', 'WhatsApp Malawi', 'Email us']
+      },
+      'malawi': {
+        keywords: ['malawi', 'africa', 'location', 'where', 'country'],
+        response: 'We operate exclusively in Malawi, Africa, focusing on rural communities that lack access to clean water and Islamic infrastructure.',
+        quickReplies: ['Why Malawi?', 'Areas we serve']
+      },
+      'sadaqa': {
+        keywords: ['sadaqa', 'sadaqah', 'jariya', 'ongoing', 'continuous'],
+        response: 'Water wells and masjids are perfect Sadaqa Jariya (ongoing charity)! They continue to benefit people and earn rewards for you long after donation.',
+        quickReplies: ['What is Sadaqa Jariya?', 'Best projects for Sadaqa']
+      },
+      'qurbani': {
+        keywords: ['qurbani', 'udhiyah', 'eid', 'sacrifice', 'sheep', 'cow'],
+        response: 'We offer Qurbani sheep (R600) and cow shares (R4,500). Meat is distributed to orphans, widows, and vulnerable families by local imams.',
+        quickReplies: ['Sheep price', 'Cow share price', 'When is Qurbani?']
+      },
+      'default': {
+        response: 'I\'m here to help! You can ask me about donations, our projects, Zakat, transparency, or contact details. How can I assist you today?',
+        quickReplies: ['How to donate', 'Our projects', 'Contact info']
       }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://wateroflife.org.za/"
+    };
+
+    // Toggle chatbot
+    chatbotToggle.addEventListener('click', () => {
+      chatbotContainer.classList.toggle('active');
+      chatbotToggle.classList.toggle('active');
+      if (chatbotContainer.classList.contains('active')) {
+        setTimeout(() => chatbotInput.focus(), 300);
+      }
+    });
+
+    chatbotClose.addEventListener('click', () => {
+      chatbotContainer.classList.remove('active');
+      chatbotToggle.classList.remove('active');
+    });
+
+    // Send message function
+    function sendMessage(text) {
+      if (!text.trim()) return;
+
+      // Add user message
+      addMessage(text, 'user');
+      chatbotInput.value = '';
+
+      // Show typing indicator
+      showTypingIndicator();
+
+      // Process and respond
+      setTimeout(() => {
+        removeTypingIndicator();
+        const response = getBotResponse(text);
+        addMessage(response.text, 'bot', response.quickReplies);
+      }, 1000 + Math.random() * 1000);
     }
-  }
+
+    // Add message to chat
+    function addMessage(text, sender, quickReplies = []) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${sender}`;
+      messageDiv.textContent = text;
+
+      if (quickReplies.length > 0) {
+        const quickRepliesDiv = document.createElement('div');
+        quickRepliesDiv.className = 'quick-replies';
+        quickReplies.forEach(reply => {
+          const button = document.createElement('button');
+          button.className = 'quick-reply';
+          button.textContent = reply;
+          button.onclick = () => sendQuickReply(reply);
+          quickRepliesDiv.appendChild(button);
+        });
+        messageDiv.appendChild(quickRepliesDiv);
+      }
+
+      chatbotMessages.appendChild(messageDiv);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    // Show typing indicator
+    function showTypingIndicator() {
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'typing-indicator';
+      typingDiv.id = 'typingIndicator';
+      typingDiv.innerHTML = '<span></span><span></span><span></span>';
+      chatbotMessages.appendChild(typingDiv);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    // Remove typing indicator
+    function removeTypingIndicator() {
+      const typing = document.getElementById('typingIndicator');
+      if (typing) typing.remove();
+    }
+
+    // Get bot response based on user input
+    function getBotResponse(input) {
+      const lowerInput = input.toLowerCase();
+      
+      // Check each knowledge base entry
+      for (const key in knowledgeBase) {
+        if (key === 'default') continue;
+        
+        const entry = knowledgeBase[key];
+        if (entry.keywords.some(keyword => lowerInput.includes(keyword))) {
+          return {
+            text: entry.response,
+            quickReplies: entry.quickReplies || []
+          };
+        }
+      }
+
+      // Check for specific questions
+      if (lowerInput.includes('bank') || lowerInput.includes('eft')) {
+        return {
+          text: 'Bank: First National Bank (FNB)\nAccount: WATER OF LIFE NPC\nNumber: 6318 9294 225\nBranch: Woodmead Retail Park\nCode: 250 955\nReference: Your Name & Project',
+          quickReplies: ['Add 1% for cash', 'Email POP']
+        };
+      }
+
+      if (lowerInput.includes('well') && lowerInput.includes('cost')) {
+        return {
+          text: 'Water Well (Bucket System): R8,500\nIncludes hygiene training and community ownership model.',
+          quickReplies: ['Donate for well', 'Borehole cost']
+        };
+      }
+
+      if (lowerInput.includes('borehole') && lowerInput.includes('cost')) {
+        return {
+          text: 'Borehole (Pump System): R23,500\nIncludes professional drilling, installation, and 5-year maintenance support.',
+          quickReplies: ['Donate for borehole', 'Well cost']
+        };
+      }
+
+      if (lowerInput.includes('masjid') && lowerInput.includes('cost')) {
+        return {
+          text: 'Build a Masjid: R190,000\nSize: 10m x 12m with 2 Wudu and 2 Ablution facilities. Perfect Sadaqa Jariya!',
+          quickReplies: ['Donate for masjid', 'What is Sadaqa Jariya?']
+        };
+      }
+
+      // Default response
+      return knowledgeBase.default;
+    }
+
+    // Quick reply function
+    function sendQuickReply(text) {
+      sendMessage(text);
+    }
+
+    // Event listeners for chatbot
+    chatbotSend.addEventListener('click', () => {
+      sendMessage(chatbotInput.value);
+    });
+
+    chatbotInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        sendMessage(chatbotInput.value);
+      }
+    });
+
+    // Welcome message after 5 seconds if chatbot not opened
+    setTimeout(() => {
+      if (!chatbotContainer.classList.contains('active')) {
+        // Optional: Show notification or auto-open
+        // chatbotContainer.classList.add('active');
+        // chatbotToggle.classList.add('active');
+      }
+    }, 5000);
+
+    console.log('💧 Water of Life NPC - Chatbot Enabled');
   </script>
 </body>
 </html>
